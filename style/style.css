@@ -1,91 +1,152 @@
-
-
-body{
-    background-color: rgb(44, 41, 38);
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
+body {
+  background-color: rgb(44, 41, 38);
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
 }
-a{
-    text-decoration: none;
-    /* color: #fa923f; */
+a {
+  text-decoration: none;
 }
-header{
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(29, 24, 26);
-    padding: 0 20px;
+header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(29, 24, 26);
+  padding: 0 5%;
 }
 #logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(238, 164, 80);
-    text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(238, 164, 80);
+  text-transform: uppercase;
+}
+
+#hamBurgur{
+    width: 3rem;
+    height:3rem ;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
     
 }
-header nav ul{
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-
-}
-header ul li{
-    margin: 0 16px;
-}
-
-
-
-header nav a{
-color:rgb(185,131,31) ;
-font-size: 20px;
-}
-header nav a:hover{
-    color:rgb(228, 163, 31) ;
- }
-
-main h1{
-    text-align: center;
-    color: rgb(238, 164, 80);
-    font-size: 48px;
-}
-#products{
-   width: 80%; 
-   margin: 50px auto;
-}
-#products ul{
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 16px;
-margin: 0;
-padding: 0;
-}
-main ul li img{
+.row{
 width: 100%;
-height: 240px;   
-object-fit: cover;
-}
-.product{
-
-    background-color: rgb(228, 206,182);
-    border-radius: 6px ;
-    overflow: hidden;
-}
-.foodContent{
-    padding: 16px;
-    text-align: center;
-}
-.btn{
-    background-color:rgb(228,157 , 44) ;
-    color: white;
-    border-radius: 4px ;
-    padding: 8px 24px;
-
-}
-.btn:hover{
-    background-color:rgb(221,137 , 34) ;
+height: 3px;
+background-color: white;
+border-radius: 5px;
 }
 
+header nav ul {
+  list-style: none;
+  display: flex;
+  /* padding: 0; */
+  /* margin: 0; */
+}
+header ul li {
+  margin: 0 1em;
+}
+
+header nav a {
+  color: rgb(185, 131, 31);
+  font-size: 1.25rem;
+}
+header nav a:hover {
+  color: rgb(228, 163, 31);
+}
 
 
+
+#sideNav{
+    width: 100%;
+    height: 100%;
+ position: fixed;
+    top: 0;
+    left: 0; 
+    background-color: rgb(29, 24, 26);
+    display: none;
+}
+#sideNav:target{
+    display: block;
+}
+#sideNav ul{
+    list-style: none;
+    margin: 0;
+    padding: 4rem 1rem;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+}
+#sideNav li{
+    margin: 1rem 0;
+}
+#sideNav a{
+    color:white ;
+font-size:2rem ;
+}
+#sideNav header {
+    justify-content: flex-end;
+}
+
+
+main h1 {
+  text-align: center;
+  color: rgb(238, 164, 80);
+  font-size: 3rem;
+}
+#products {
+  width: 80%;
+  margin: 3rem  auto;
+}
+#products ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+main ul li img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+.product {
+  background-color: rgb(228, 206, 182);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.foodContent h2{
+    margin:0 0 2rem 0 ;
+}
+.foodContent {
+  padding: 1rem;
+  text-align: center;
+}
+.btn {
+  background-color: rgb(228, 157, 44);
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+}
+.btn:hover {
+  background-color: rgb(221, 137, 34);
+}
+
+
+
+@media (max-width:48rem ) {
+    
+    #products ul {
+        grid-template-columns: 100%;
+      }
+      main h1 {
+        font-size: 1.5rem;
+      }
+      header nav {
+        display: none;
+      }
+
+ #hamBurgur{
+     display: flex;
+ }
+}
